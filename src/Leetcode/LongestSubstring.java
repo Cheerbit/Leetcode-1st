@@ -22,6 +22,7 @@ public class LongestSubstring {
         	if(map.containsKey(cur) && map.get(cur)>=start){
         		maxLen = Math.max(maxLen, end-start);
         		start=map.get(cur) +1;
+        		//ex. [a,b,c,b,e,f,a,b]
         		//If we hit a recurrence of a character, it means that we find a substring without repeating characters (ended before this character). 
         		//Suppose we start from s[i] and find out the s[j] is same as s[k], where k<j. 
         		//That said, s[i..j-1] is a substring without repeats. 
