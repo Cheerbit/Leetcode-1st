@@ -1,7 +1,6 @@
 package Leetcode;
 
-import java.util.LinkedList;
-import java.util.Queue;
+
 
 
 /**
@@ -20,17 +19,20 @@ the shortest path from the root node down to the nearest leaf node.
 BFS can stop as soon as it hits the first leaf and return the depth there.
  */
 public class MinDepthOfBinaryTree {
-	public int minDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        if (root.left != null && root.right != null) {
-            return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
-        } else if (root.left != null) {
-            return minDepth(root.left) + 1;
-        } else {
-            return minDepth(root.right) + 1;
-        }
-    }
+	public int minDepth(TreeNode root){
+		if(root==null){
+			return 0;
+		}
+		
+		if(root.left!=null && root.right!=null){
+			return Math.min(minDepth(root.left), minDepth(root.right)) +1;
+		}else if(root.left!=null){
+			return minDepth(root.left) +1;
+		}else if(root.right!=null){
+			return minDepth(root.right) +1;
+		}else{
+			return 1;
+		}
+	}
 }
 
