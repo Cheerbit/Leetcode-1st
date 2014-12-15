@@ -1,5 +1,6 @@
 package Leetcode;
 
+
 /**
  * Created by 7 
  * @Buffalo
@@ -29,6 +30,5 @@ public class PathSum {
 	    }
 	 
 }
-
 
 
