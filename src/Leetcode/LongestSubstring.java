@@ -13,13 +13,13 @@ import java.util.HashMap;
  */
 public class LongestSubstring {
 	public int lengthOfLongestSubstring(String s) {
-        int maxLen=0;
+        int maxLen = 0;
         int start=0;
         int end =0;
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         while(end<s.length()){
         	char cur = s.charAt(end);
-        	if(map.containsKey(cur) && map.get(cur)>=start){
+        	if(map.containsKey(cur) && map.get(cur) >= start) {
         		maxLen = Math.max(maxLen, end-start);
         		start=map.get(cur) +1;
         		//ex. [a,b,c,b,e,f,a,b]
