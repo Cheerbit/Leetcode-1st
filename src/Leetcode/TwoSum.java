@@ -18,17 +18,16 @@ Output: index1=1, index2=2
 
  */
 public class TwoSum {
-	public int[] twoSum(int[] numbers, int target){
+	public int[] twoSum(int[] numbers, int target) {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int[] indice = new int[2];
-		for(int i=0;i<numbers.length;i++){
-			int x = target -numbers[i];
-			if(map.get(x)!=null){
-				indice[0]=map.get(x)+1;
-				indice[1]=i+1;
-			}
-			else{
-				map.put(numbers[i],i);
+		for (int i = 0; i < numbers.length; i++) {
+			int x = target - numbers[i];
+			if(map.get(x) != null) {
+				indice[0] = map.get(x) + 1;
+				indice[1] = i + 1;
+			} else {
+				map.put(numbers[i], i);
 			}
 		}
 		return indice;
