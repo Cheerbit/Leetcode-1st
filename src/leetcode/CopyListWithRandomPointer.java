@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class CopyListWithRandomPointer {
 	public RandomListNode copyRandomList(RandomListNode head) {
 		if (head == null)
-			return null;
+			return null; 
 		HashMap<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
 		RandomListNode newHead = new RandomListNode(head.label);
 	 
